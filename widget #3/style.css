@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #1e1e2f;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+
+.container{
+    max-width: 650px;
+    margin: 50px auto;
+}
+
+p{
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.timeline{
+    position: relative;
+    padding-left: 4rem;
+    margin: 0 0 0 30px;
+    color: #fff;
+}
+
+.timeline::before{
+    content: "";
+    width: 4px;
+    height: 99%;
+    position: absolute;
+    background-color: #27293d;
+    left: 0;
+    top: 15px;
+}
+
+.timeline .timeline-box{
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline .timeline-box .icon{
+    position: absolute;
+    left: -88px;
+    top: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: #4f537b;
+    border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.timeline .timeline-box .icon i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline .timeline-box .timeline-body{
+    background-color: #27293d;
+    border-radius: 6px;
+    padding: 20px 18px 15px 20px;
+    box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.timeline .timeline-box .timeline-body:hover{
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.6);
+}
+
+.timeline .timeline-box .timeline-body::before{
+    content: "";
+    background-color: inherit;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: -10px;
+    transform: rotate(45deg);
+    border-radius: 0 0 0 3px;
+}
+
+.timeline .timeline-box .timeline-body .header{
+    margin-bottom: 1.2rem;
+}
+
+.timeline .timeline-box .timeline-body .header .badge{
+    background-color: #4f537b;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.timeline .timeline-box .timeline-body .time{
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.4;
+    margin-top: 16px;
+    font-size: 11px;
+}
+
+#primary .badge, #primary .icon{
+    background-color: #42a5f5;
+}
+
+#success .badge, #success .icon{
+    background-color: #66bb6a;
+}
+
+#danger .badge, #danger .icon{
+    background-color: #ec407a;
+}
+
+#warning .badge, #warning .icon{
+    background-color: #ffa726;
+}
+
+#info .badge, #info .icon{
+    background-color: #29b6f6;
+}
